@@ -1,5 +1,5 @@
 # GMMTPS
-It contains all the codes for simulation and real data analysis for calculating the GMM estimator in two-phase studies which we call as GMMTPS estimator.Some of the R (version 4.1.1, Platform: x86_64-apple-darwin17.0 (64-bit), Running under: macOS Big Sur 10.16) packages the user needs to install include *survival*, *survey*, *OrdNor*, *magic*, *dplyr*, *ggplot2* and *ggpubr*.
+It contains all the codes for simulation and real data analysis for calculating the GMM estimator in two-phase studies which we call as GMMTPS estimator. The details of the method is provided in our paper [1]. Some of the R (version 4.1.1, Platform: x86_64-apple-darwin17.0 (64-bit), Running under: macOS Big Sur 10.16) packages the user needs to install include *survival*, *survey*, *OrdNor*, *magic*, *dplyr*, *ggplot2* and *ggpubr*.
 ## Simulation
 *Simulation* folder contains all the codes associated with the simulation studies in the paper.
 ### Table 1 Results in the paper:
