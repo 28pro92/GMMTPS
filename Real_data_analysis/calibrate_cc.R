@@ -1,6 +1,6 @@
 library(survival)
 library(survey)
-cohort.study = nwtco
+cohort.study = survival::nwtco
 cohort.study$age = as.numeric(scale(cohort.study$age/12))
 cohort.study$age1 = as.numeric(cohort.study$age/12)
 #cohort.study$age1 = as.numeric(scale(cohort.study$age1))
@@ -24,7 +24,7 @@ for(i in 1:1000)
 {
   calibrate.fail = 0
   glm.fail = 0
-  cohort.study = nwtco
+  cohort.study = survival::nwtco
   #cohort.study$histol <- factor(cohort.study$histol)
   cohort.study$instit <- factor(cohort.study$instit)
   cohort.study$stage <- factor(cohort.study$stage)
