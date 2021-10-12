@@ -44,4 +44,4 @@ arXiv:1910.11991v2 [stat.ME].
 <a id="2">[1]</a> 
 Therneau, T.M. (2021). 
 A Package for Survival Analysis in R. 
-arXiv:1910.11991v2 [stat.ME].
+https://CRAN.R-project.org/package=survival.
