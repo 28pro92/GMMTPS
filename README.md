@@ -1,7 +1,7 @@
 # GMMTPS
 It contains all the codes for simulation and real data analysis for calculating the GMM estimator in two-phase studies which we call as GMMTPS estimator.Some of the R (version 4.1.1, Platform: x86_64-apple-darwin17.0 (64-bit), Running under: macOS Big Sur 10.16) packages the user needs to install include *survival*, *survey*, *OrdNor*, *magic*, *dplyr*, *ggplot2* and *ggpubr*.
 ## Simulation
-This folder contains all the codes associated with the simulation studies in the paper.
+*Simulation* folder contains all the codes associated with the simulation studies in the paper.
 ### Table 1 Results in the paper:
 The Table1_results folder contains all the codes evaluating the performance of GMMTPS estimator and its comparison with SPML estimator.  
 #### GMMTPS
@@ -13,7 +13,7 @@ The Table1_results folder contains all the codes evaluating the performance of G
 - *missreg_comparision_simu_1.R* uses five files which are sourced in the file itself. The five files are *bin2stg.R*, *binmods.R*, *utilities.R*, *MLEfn.R* and *MLInf.R*. These files are provided by Prof. Chris Wild.
 - *missreg_case_control_table1.rds* contains the results for 1000 simulations evaluating the SPML estimator.
 ### Table 2 Results in the paper:
-The Table2_results folder contains all the codes evaluating the performance of GMMTPS estimator and its comparison with SPML estimator for reproducing the results in Table 2 of the paper. The simulations are performed imitating the structure of *nwtco* data from National Wilm's Tumor Study. The *nwtco* data is available in the *survival* package in R.
+The *Table2_results* folder contains all the codes evaluating the performance of GMMTPS estimator and its comparison with SPML estimator for reproducing the results in Table 2 of the paper. The simulations are performed imitating the structure of *nwtco* data from National Wilm's Tumor Study. The *nwtco* data is available in the *survival* package in R.
 #### Table2_results
 - *genmeta_simulation_case_control.R* file is the main file evaluating the GMMTPS estimator in the case-control design setup. The phase-I model contains the main terms as indicated in the paper. The results are stored in *genmeta_realdata_simulation_CC_w_main_effects_phase_I.rds*.
 - *genmeta_simulation_case_control_with_added_interaction.R* file is the main file evaluating the GMMTPS estimator in the case-control design setup. The phase-I model is a saturated model including interaction terms in addition to the main terms as indicated in the paper. The results are stored in *genmeta_realdata_simulation_CC_w_additional_interaction.rds*.
