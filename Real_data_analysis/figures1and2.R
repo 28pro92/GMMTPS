@@ -1,6 +1,8 @@
 library(survival)
 library(survey)
-cohort.study = nwtco
+library(ggplot2)
+library(ggpubr)
+cohort.study = survival::nwtco
 cohort.study$age = as.numeric(scale(cohort.study$age/12))
 
 cohort.study$histol = factor(cohort.study$histol)
@@ -37,13 +39,13 @@ p10 = ggplot(data.plot.mse.cc[28:30,c(1,3)], aes(Method, MSE), ylab = "") + geom
 p11 = ggplot(data.plot.mse.cc[31:33,c(1,3)], aes(Method, MSE), ylab = "") + geom_bar(stat = "identity", width = .4) + scale_y_continuous(limits=c(0,max(data.plot.mse.cc[31:33,c(1,3)][,1]))) + xlab("Stage-IIIxAge") 
 p12 = ggplot(data.plot.mse.cc[34:36,c(1,3)], aes(Method, MSE), ylab = "") + geom_bar(stat = "identity", width = .4) + scale_y_continuous(limits=c(0,max(data.plot.mse.cc[34:36,c(1,3)][,1]))) + xlab("Stage-IVxAge") 
 mse.plot.cc = ggarrange(p1 + rremove("y.title"), p2 + rremove("y.title"), p3 + rremove("y.title"), p4 + rremove("y.title"), p5 + rremove("y.title"), p6 + rremove("y.title"), p7 + rremove("y.title"), p8 + rremove("y.title"), p9 + rremove("y.title"), p10 + rremove("y.title"), p11 + rremove("y.title"), p12 + rremove("y.title"), ncol = 4, nrow = 3)
-#png("/Users/prosenjitkundu/Dropbox/Biometrics_two_phase/Resubmission1/CC_stage_instit_interaction_imp_model_revision.png", res = 1200)
 annotate_figure(mse.plot.cc, left = text_grob("MSE", rot = 90, size=12))
+ggsave(mse.plot.cc, file="/Users/prosenjitkundu/Desktop/Code_biometrics_github/Real_data_analysis/CC_simple_imp_model.tiff", dpi = 1200)
 
 
 
 #Balanced
-cohort.study = nwtco
+cohort.study = survival::nwtco
 cohort.study$age = as.numeric(scale(cohort.study$age/12))
 
 cohort.study$histol = factor(cohort.study$histol)
@@ -88,5 +90,5 @@ p10 = ggplot(data.plot.mse.balanced[28:30,c(1,3)], aes(Method, MSE), ylab = "") 
 p11 = ggplot(data.plot.mse.balanced[31:33,c(1,3)], aes(Method, MSE), ylab = "") + geom_bar(stat = "identity", width = .4) + scale_y_continuous(limits=c(0,max(data.plot.mse.balanced[31:33,c(1,3)][,1]))) + xlab("Stage-IIIxAge") 
 p12 = ggplot(data.plot.mse.balanced[34:36,c(1,3)], aes(Method, MSE), ylab = "") + geom_bar(stat = "identity", width = .4) + scale_y_continuous(limits=c(0,max(data.plot.mse.balanced[34:36,c(1,3)][,1]))) + xlab("Stage-IVxAge") 
 mse.plot.balanced = ggarrange(p1 + rremove("y.title"), p2 + rremove("y.title"), p3 + rremove("y.title"), p4 + rremove("y.title"), p5 + rremove("y.title"), p6 + rremove("y.title"), p7 + rremove("y.title"), p8 + rremove("y.title"), p9 + rremove("y.title"), p10 + rremove("y.title"), p11 + rremove("y.title"), p12 + rremove("y.title"), ncol = 4, nrow = 3)
-#png("/Users/prosenjitkundu/Dropbox/Biometrics_two_phase/Resubmission1/CC_stage_instit_interaction_imp_model_revision.png", res = 1200)
 annotate_figure(mse.plot.balanced, left = text_grob("MSE", rot = 90, size=12))
+ggsave(mse.plot.balanced, file="/Users/prosenjitkundu/Desktop/Code_biometrics_github/Real_data_analysis/balanced_simple_imp_model.tiff", dpi = 1200)
