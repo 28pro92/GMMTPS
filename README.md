@@ -44,4 +44,11 @@ arXiv:1910.11991v2 [stat.ME].
 <a id="2">[1]</a> 
 Therneau, T.M. (2021). 
 A Package for Survival Analysis in R. 
+R package version 3.2-11.
 https://CRAN.R-project.org/package=survival.
+
+<a id="3">[1]</a> 
+Lumley, T. (2020). 
+survey: analysis of complex survey samples. 
+R package version 4.0.
+https://cran.r-project.org/package=survey.
