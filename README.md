@@ -25,6 +25,14 @@ This sub-folder contains the codes for evaluating the SPML estimator according t
 - *real_data_simulation_genord_case_control_added_interaction.R* is the main file evaluating the SPML estimator in the case-control design setup. The results are stored in *missreg_real_data_simulation_genord_cc_added_interaction.rds*
 - *real_data_simulation_genord_balanced_added_interaction.R* is the main file evaluating the SPML estimator in the balanced design setup. The results are stored in *missreg_real_data_simulation_genord_balanced_added_interaction.rds*
 ## Real Data Analysis
+The *Real_data_analysis* folder contains the code for comparing the performance of three methods namely GMMTPS, SPML and calibration in the *nwtco* data from the National Wilms Tumor Study. *figures1and2.R* contains the code for reproducing figures 1 and 2 in the paper.
 ### GMMTPS
+- *Genmeta_realdata_casecontrol_w_age.R* contains the code for evaluating the GMMTPS estimator in the *nwtco* data from the *survival* package under the case-control design discussed in Table 3 of the paper. The results are based on 1000 simualtions of phase-II data. They are stored in *real_data_GENMETA_w_age_case_control.rds*. The corresponding code file and result file for the balanced design are *Genmeta_realdata_balanced_w_age.R* and *real_data_GENMETA_w_age_balanced.rds*, respectively.
 ### SPML
+*missreg* sub-folder contains the code files for estimating using SPML method under the same set-up as in GMMTPS.  
+- *missreg_real_data_age_case_control.R* contains the code for evaluating the GMMTPS estimator in the *nwtco* data from the *survival* package under the case-control design discussed in Table 3 of the paper. The results are based on 1000 simualtions of phase-II data. They are stored in *missreg_realdata_case_control_w_age.rds*. The corresponding code file and result file for the balanced design are *missreg_real_data_age_balanced.R* and *missreg_realdata_balanced_w_age.rds*, respectively.
 ### Calibration
+The following *.R* files contain the code for estimating using the calibration approache described in *Kulich et.al.* under the same set-up as in GMMTPS. *Raking* was used as the calibration function from the *survey* package.
+- *calibrate_cc.R* contains the code for evaluating the calibration estimator in the *nwtco* data from the *survival* package under the case-control design discussed in Table 3 of the paper. The results are based on 1000 simualtions of phase-II data. They are stored in *calibrate_cc.rds*. The corresponding code file and result file for the balanced design are *calibrate_balanced.R* and *calibrate_balanced.rds*, respectively.
+
+# References
