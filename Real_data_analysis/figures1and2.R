@@ -25,6 +25,8 @@ var.names = rep(c("UH","Stage-II","Stage-III","Stage-IV","Age","UHxStage-II","UH
 data.plot.mse.cc = data.frame(cbind(c(rbind(genmeta_CC, missreg_CC, MSE.cc.calibrate)), var.names, Method))
 colnames(data.plot.mse.cc) = c("MSE", "Variable.Name", "Method")
 data.plot.mse.cc$MSE = as.numeric(data.plot.mse.cc$MSE)
+data.plot.mse.cc = within(data.plot.mse.cc, Method <- factor(Method, levels=c("SPML","Calibration", "GMM")))
+
 
 p1 = ggplot(data.plot.mse.cc[1:3,c(1,3)], aes(x = Method, MSE), ylab = "") + geom_bar(stat = "identity", width = .4) + scale_y_continuous(limits=c(0,max(data.plot.mse.cc[1:3,c(1,3)][,1]))) + xlab("UH") 
 p2 = ggplot(data.plot.mse.cc[4:6,c(1,3)], aes(Method, MSE), ylab = "") + geom_bar(stat = "identity", width = .4) + scale_y_continuous(limits=c(0,max(data.plot.mse.cc[4:6,c(1,3)][,1]))) + xlab("Stage-II") 
@@ -76,6 +78,8 @@ var.names = rep(c("UH","Stage-II","Stage-III","Stage-IV","Age","UHxStage-II","UH
 data.plot.mse.balanced = data.frame(cbind(c(rbind(genmeta_balanced, missreg_balanced, MSE.balanced.calibrate)), var.names, Method))
 colnames(data.plot.mse.balanced) = c("MSE", "Variable.Name", "Method")
 data.plot.mse.balanced$MSE = as.numeric(data.plot.mse.balanced$MSE)
+data.plot.mse.balanced = within(data.plot.mse.balanced, Method <- factor(Method, levels=c("SPML","Calibration", "GMM")))
+
 
 p1 = ggplot(data.plot.mse.balanced[1:3,c(1,3)], aes(x = Method, MSE), ylab = "") + geom_bar(stat = "identity", width = .4) + scale_y_continuous(limits=c(0,max(data.plot.mse.balanced[1:3,c(1,3)][,1]))) + xlab("UH") 
 p2 = ggplot(data.plot.mse.balanced[4:6,c(1,3)], aes(Method, MSE), ylab = "") + geom_bar(stat = "identity", width = .4) + scale_y_continuous(limits=c(0,max(data.plot.mse.balanced[4:6,c(1,3)][,1]))) + xlab("Stage-II") 
