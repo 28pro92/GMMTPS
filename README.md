@@ -36,4 +36,7 @@ The following *.R* files contain the code for estimating using the calibration a
 - *calibrate_cc.R* contains the code for evaluating the calibration estimator in the *nwtco* data from the *survival* package under the case-control design discussed in Table 3 of the paper. The results are based on 1000 simualtions of phase-II data. They are stored in *calibrate_cc.rds*. The corresponding code file and result file for the balanced design are *calibrate_balanced.R* and *calibrate_balanced.rds*, respectively.
 
 # References
-{% bibliography --cited --file GMMTPS/reference.bib  %}
+<a id="1">[1]</a> 
+Dijkstra, E. W. (1968). 
+Go to statement considered harmful. 
+Communications of the ACM, 11(3), 147-148.
