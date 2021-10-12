@@ -19,8 +19,8 @@ The Table2_results folder contains all the codes evaluating the performance of G
 - *genmeta_simulation_case_control_with_added_interaction.R* file is the main file evaluating the GMMTPS estimator in the case-control design setup. The phase-I model is a saturated model including interaction terms in addition to the main terms as indicated in the paper. The results are stored in *genmeta_realdata_simulation_CC_w_additional_interaction.rds*.
 - *genmeta_simulation_balanced.R* file is the main file evaluating the GMMTPS estimator in the case-control design setup. The phase-I model contains the main terms as indicated in the paper. The results are stored in *genmeta_realdata_simulation_balanced_w_main_effects_phase_I.rds*.
 - *genmeta_simulation_balanced_with_added_interaction.R* file is the main file evaluating the GMMTPS estimator in the case-control design setup. The phase-I model is a saturated model including interaction terms in addition to the main terms as indicated in the paper. The results are stored in *genmeta_realdata_simulation_balanced_w_additional_interaction.rds*. 
-#### missreg3
-This folder contains the codes for evaluating the SPML estimator according the same simulaton scheme.
+##### missreg3
+This sub-folder contains the codes for evaluating the SPML estimator according the same simulaton scheme.
 - *real_data_simulation_genord_case_control_added_interaction.R* is the main file evaluating the SPML estimator in the case-control design setup. The results are stored in *missreg_real_data_simulation_genord_cc_added_interaction.rds*
 - *real_data_simulation_genord_balanced_added_interaction.R* is the main file evaluating the SPML estimator in the balanced design setup. The results are stored in *missreg_real_data_simulation_genord_balanced_added_interaction.rds*
 ## Real Data Analysis
