@@ -37,6 +37,10 @@ The following *.R* files contain the code for estimating using the calibration a
 
 # References
 <a id="1">[1]</a> 
-Dijkstra, E. W. (1968). 
-Go to statement considered harmful. 
-Communications of the ACM, 11(3), 147-148.
+Kundu, P. and Chatterjee, N. (2019). 
+Analysis of Two-Phase Studies using Generalized Method of Moments. 
+arXiv:1910.11991v2 [stat.ME].
+<a id="2">[1]</a> 
+Kundu, P. and Chatterjee, N. (2019). 
+Analysis of Two-Phase Studies using Generalized Method of Moments. 
+arXiv:1910.11991v2 [stat.ME].
