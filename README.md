@@ -32,7 +32,7 @@ The *Real_data_analysis* folder contains the code for comparing the performance 
 *missreg* sub-folder contains the code files for estimating using SPML method under the same set-up as in GMMTPS.  
 - *missreg_real_data_age_case_control.R* contains the code for evaluating the GMMTPS estimator in the *nwtco* data from the *survival* package under the case-control design discussed in Table 3 of the paper. The results are based on 1000 simualtions of phase-II data. They are stored in *missreg_realdata_case_control_w_age.rds*. The corresponding code file and result file for the balanced design are *missreg_real_data_age_balanced.R* and *missreg_realdata_balanced_w_age.rds*, respectively.
 ### Calibration
-The following *.R* files contain the code for estimating using the calibration approache described in *Kulich et.al.* under the same set-up as in GMMTPS. *Raking* was used as the calibration function from the *survey* package.
+The following *.R* files contain the code for estimating using the calibration approache described in *Breslow,N.E., et.al.*[4] under the same set-up as in GMMTPS. *Raking* was used as the calibration function from the *survey* package.
 - *calibrate_cc.R* contains the code for evaluating the calibration estimator in the *nwtco* data from the *survival* package under the case-control design discussed in Table 3 of the paper. The results are based on 1000 simualtions of phase-II data. They are stored in *calibrate_cc.rds*. The corresponding code file and result file for the balanced design are *calibrate_balanced.R* and *calibrate_balanced.rds*, respectively.
 
 # References
@@ -41,14 +41,21 @@ Kundu, P. and Chatterjee, N. (2019).
 Analysis of Two-Phase Studies using Generalized Method of Moments. 
 arXiv:1910.11991v2 [stat.ME].
 
-<a id="2">[1]</a> 
+<a id="2">[2]</a> 
 Therneau, T.M. (2021). 
 A Package for Survival Analysis in R. 
 R package version 3.2-11.
 https://CRAN.R-project.org/package=survival.
 
-<a id="3">[1]</a> 
+<a id="3">[3]</a> 
 Lumley, T. (2020). 
 survey: analysis of complex survey samples. 
 R package version 4.0.
 https://cran.r-project.org/package=survey.
+
+<a id="4">[4]</a> 
+Breslow, N.E. (2009). 
+Using the Whole Cohort in the Analysis of Case-Cohort Data. 
+American Journal of Epidemiology, 11, 1398--1405.
+doi:10.1093/aje/kwp055.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2768499/.
