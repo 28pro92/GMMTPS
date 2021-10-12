@@ -40,6 +40,7 @@ The following *.R* files contain the code for estimating using the calibration a
 Kundu, P. and Chatterjee, N. (2019). 
 Analysis of Two-Phase Studies using Generalized Method of Moments. 
 arXiv:1910.11991v2 [stat.ME].
+
 <a id="2">[1]</a> 
 Kundu, P. and Chatterjee, N. (2019). 
 Analysis of Two-Phase Studies using Generalized Method of Moments. 
